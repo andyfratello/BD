@@ -1,4 +1,4 @@
--- Exercici 1
+// Exercici 1
 
 /*
 AQUEST EXERCICI NO ES CORREGIRÀ DE MANERA AUTOMÀTICA
@@ -52,24 +52,25 @@ Doneu el codi dela part del programa des del bloc IMPLEMENTAR fins al final.
 Escriviu la resposta a les preguntes anteriors en el formulari del qüestionari i premeu "Envia".
 */
 
---Solució
-Exec1: No hi ha cap canvi al fer l’execució ja que després d’afegir el professor amb nom “nina” es fa un rollback i, per tant, no s’acaba insertant.
+//Solució
+///Exec1: No hi ha cap canvi al fer l’execució ja que després d’afegir el professor amb nom “nina” es fa un rollback i, per tant, no s’acaba insertant.
 
-Exec2: A l’executar la sentència al DBeaver veiem que s’afegeix el professor “nina” a la taula juntament amb tots els seus atributs corresponents. Això és degut a que ara s’executa un commit que confirma el nostre insert.
+///Exec2: A l’executar la sentència al DBeaver veiem que s’afegeix el professor “nina” a la taula juntament amb tots els seus atributs corresponents. Això és degut a que ara s’executa un commit que confirma el nostre insert.
 
-Exec3: L’excepció que es produeix és una unique_violation, ja que ens retorna el codi SQLSTATE 23505.
+/*Exec3: L’excepció que es produeix és una unique_violation, ja que ens retorna el codi SQLSTATE 23505.
 Sobre la taula professors no hi haurà cap canvi respecte abans ja que ens ha saltat l’error i això no tindrà cap efecte sobre la taula en sí. Salta l’error ja que estem intentant afegir una tupla amb una primary key repetida a la taula.
 Per tal que ens surti el missatge “El professor ja existeix” caldrà afegir dins de catch (SQLException se) la següent sentència:
-if (se.getSQLState().equals("23505")) System.out.println ("El professor ja existeix”);
+if (se.getSQLState().equals("23505")) System.out.println ("El professor ja existeix”);*/
 
-Exec4: A l’executar el programa Java ens dóna com a resultat els dni i noms de tots aquells professors que tenen un número inferior a buscaTelf. Ens mostra el següent:
+///Exec4: A l’executar el programa Java ens dóna com a resultat els dni i noms de tots aquells professors que tenen un número inferior a buscaTelf. Ens mostra el següent:
+/*
 Canvi d'esquema realitzat correctament.
 
 111                                                ruth                                              
 222                                                ona                                               
 333                                                anna 
-
-El codi del bloc IMPLEMENTAR és:
+*/
+//El codi del bloc IMPLEMENTAR és:
 
 String buscaTelf="3334";    
 ResultSet r = s.executeQuery ("select dni,nomprof "+
