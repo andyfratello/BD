@@ -279,3 +279,4 @@ CREATE TABLE productesComprats
 	    PRIMARY KEY (numComanda,producte),
 	    FOREIGN KEY (numComanda) REFERENCES comandes(numComanda));
       
+ 
